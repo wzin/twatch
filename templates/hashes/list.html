@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if hash_list %}
+    <ul>
+    {% for hash in hash_list %}
+        <li><a href="{% url hashes_detail hash.id %}">{{ hash.title }}</a> <small>[last edited {{hash.last_update|timesince}} ago]</small></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    You don't have hashes
+    {% endif %}
+{% endblock %}

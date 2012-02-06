@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ hash.title }}</h2>
+    <p>{{ hash.content }}</p>
+    
+    <a href="{% url hashes_update hash.id %}">Edit hash</a> | <a href="{% url hashes_delete hash.id %}">Delete Hash</a>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="post">
+        <p>Are you sure want to delete {{ hash.title }}?</p>
+        <p><input type="submit" value="Continue &rarr;" /> or <a href="{% url hashes_list %}">Cancel</a></p>
+    </form>
+{% endblock %}
